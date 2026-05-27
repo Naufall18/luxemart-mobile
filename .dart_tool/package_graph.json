@@ -29,12 +29,12 @@
         "hive_flutter",
         "image_picker",
         "intl",
+        "json_annotation",
         "local_auth",
         "lottie",
         "path_provider",
         "permission_handler",
         "pretty_dio_logger",
-        "retrofit",
         "riverpod_annotation",
         "share_plus",
         "shared_preferences",
@@ -49,7 +49,6 @@
         "freezed",
         "hive_generator",
         "json_serializable",
-        "retrofit_generator",
         "riverpod_generator"
       ]
     },
@@ -94,22 +93,6 @@
         "hive",
         "source_gen",
         "source_helper"
-      ]
-    },
-    {
-      "name": "retrofit_generator",
-      "version": "8.2.1",
-      "dependencies": [
-        "analyzer",
-        "build",
-        "built_collection",
-        "code_builder",
-        "dart_style",
-        "dio",
-        "protobuf",
-        "retrofit",
-        "source_gen",
-        "tuple"
       ]
     },
     {
@@ -191,6 +174,13 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "json_annotation",
+      "version": "4.9.0",
+      "dependencies": [
+        "meta"
       ]
     },
     {
@@ -439,14 +429,6 @@
       ]
     },
     {
-      "name": "retrofit",
-      "version": "4.9.2",
-      "dependencies": [
-        "dio",
-        "meta"
-      ]
-    },
-    {
       "name": "dio",
       "version": "5.9.2",
       "dependencies": [
@@ -557,13 +539,6 @@
       ]
     },
     {
-      "name": "json_annotation",
-      "version": "4.9.0",
-      "dependencies": [
-        "meta"
-      ]
-    },
-    {
       "name": "source_gen",
       "version": "1.5.0",
       "dependencies": [
@@ -670,48 +645,6 @@
         "collection",
         "meta"
       ]
-    },
-    {
-      "name": "protobuf",
-      "version": "3.1.0",
-      "dependencies": [
-        "collection",
-        "fixnum",
-        "meta"
-      ]
-    },
-    {
-      "name": "tuple",
-      "version": "2.0.2",
-      "dependencies": []
-    },
-    {
-      "name": "dart_style",
-      "version": "2.3.6",
-      "dependencies": [
-        "analyzer",
-        "args",
-        "collection",
-        "path",
-        "pub_semver",
-        "source_span"
-      ]
-    },
-    {
-      "name": "code_builder",
-      "version": "4.11.1",
-      "dependencies": [
-        "built_collection",
-        "built_value",
-        "collection",
-        "matcher",
-        "meta"
-      ]
-    },
-    {
-      "name": "built_collection",
-      "version": "5.1.1",
-      "dependencies": []
     },
     {
       "name": "riverpod_analyzer_utils",
@@ -874,6 +807,29 @@
       "dependencies": [
         "async",
         "path"
+      ]
+    },
+    {
+      "name": "dart_style",
+      "version": "2.3.6",
+      "dependencies": [
+        "analyzer",
+        "args",
+        "collection",
+        "path",
+        "pub_semver",
+        "source_span"
+      ]
+    },
+    {
+      "name": "code_builder",
+      "version": "4.11.1",
+      "dependencies": [
+        "built_collection",
+        "built_value",
+        "collection",
+        "matcher",
+        "meta"
       ]
     },
     {
@@ -1792,21 +1748,6 @@
       ]
     },
     {
-      "name": "fixnum",
-      "version": "1.1.1",
-      "dependencies": []
-    },
-    {
-      "name": "built_value",
-      "version": "8.12.6",
-      "dependencies": [
-        "built_collection",
-        "collection",
-        "fixnum",
-        "meta"
-      ]
-    },
-    {
       "name": "custom_lint_core",
       "version": "0.6.3",
       "dependencies": [
@@ -1847,6 +1788,21 @@
     {
       "name": "web",
       "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "built_value",
+      "version": "8.12.6",
+      "dependencies": [
+        "built_collection",
+        "collection",
+        "fixnum",
+        "meta"
+      ]
+    },
+    {
+      "name": "built_collection",
+      "version": "5.1.1",
       "dependencies": []
     },
     {
@@ -2044,6 +2000,11 @@
         "pub_semver",
         "yaml"
       ]
+    },
+    {
+      "name": "fixnum",
+      "version": "1.1.1",
+      "dependencies": []
     },
     {
       "name": "vm_service",
