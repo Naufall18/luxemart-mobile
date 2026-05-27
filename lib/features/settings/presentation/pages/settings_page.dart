@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:luxemart/core/theme/app_colors.dart';
+import 'package:Velvoria/core/theme/app_colors.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -55,7 +55,7 @@ class _SettingsPageState extends State<SettingsPage> {
           _section('About', [
             _navItem(Icons.description_outlined, 'Terms of Service'),
             _navItem(Icons.policy_outlined, 'Privacy Policy'),
-            _navItem(Icons.info_outline, 'About LUXEMART'),
+            _navItem(Icons.info_outline, 'About Velvoria'),
             _navItem(Icons.help_outline, 'Help Center'),
           ]),
           const SizedBox(height: 16),

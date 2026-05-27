@@ -6,20 +6,20 @@ import 'core/routes/app_router.dart';
 void main() {
   runApp(
     const ProviderScope(
-      child: LuxeMartApp(),
+      child: VelvoriaApp(),
     ),
   );
 }
 
-class LuxeMartApp extends ConsumerWidget {
-  const LuxeMartApp({super.key});
+class VelvoriaApp extends ConsumerWidget {
+  const VelvoriaApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(appRouterProvider);
 
     return MaterialApp.router(
-      title: 'LuxeMart',
+      title: 'Velvoria',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

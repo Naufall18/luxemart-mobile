@@ -4,7 +4,7 @@ class AppStrings {
   AppStrings._();
 
   // App Info
-  static const String appName = 'LuxeMart';
+  static const String appName = 'Velvoria';
   static const String appTagline = 'Premium Luxury Marketplace';
 
   // Common

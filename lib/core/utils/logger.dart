@@ -45,7 +45,7 @@ class Logger {
 
     developer.log(
       logMessage,
-      name: 'LuxeMart',
+      name: 'Velvoria',
       error: error,
       stackTrace: stackTrace,
     );

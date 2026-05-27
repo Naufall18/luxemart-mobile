@@ -146,8 +146,8 @@ class _HelpCenterPageState extends State<HelpCenterPage> {
   Widget _buildFaqSection() {
     const faqs = [
       _FaqItem('How do I track my order?', 'Go to "My Orders" in your profile, find the order, and tap "Track Order". You can see real-time status updates and estimated delivery time.'),
-      _FaqItem('What is LuxeMart\'s return policy?', 'We offer a 14-day return policy for all items in original condition. Luxury items are eligible for free returns with our premium shipping label.'),
-      _FaqItem('How do I verify product authenticity?', 'Every product on LuxeMart comes with an authenticity certificate. You can scan the QR code on the certificate to verify with our blockchain-based verification system.'),
+      _FaqItem('What is Velvoria\'s return policy?', 'We offer a 14-day return policy for all items in original condition. Luxury items are eligible for free returns with our premium shipping label.'),
+      _FaqItem('How do I verify product authenticity?', 'Every product on Velvoria comes with an authenticity certificate. You can scan the QR code on the certificate to verify with our blockchain-based verification system.'),
       _FaqItem('How do I become a seller?', 'Go to Settings > Become a Seller. Complete the verification process including business documentation and identity verification. Approval typically takes 2-3 business days.'),
       _FaqItem('What payment methods are accepted?', 'We accept Credit/Debit cards (Visa, Mastercard, Amex), digital wallets (GoPay, OVO, Dana), bank transfers, installment plans, and Cash on Delivery.'),
     ];
@@ -229,7 +229,7 @@ class _HelpCenterPageState extends State<HelpCenterPage> {
         _buildContactTile(
           Icons.email_rounded,
           'Email Support',
-          'support@luxemart.com',
+          'support@Velvoria.com',
           const Color(0xFF4A90D9),
         ),
         _buildContactTile(

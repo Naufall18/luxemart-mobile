@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📱 LuxeMart Mobile
+# 📱 Velvoria Mobile
 
 ### Premium Luxury Marketplace - Flutter Application
 
@@ -20,7 +20,7 @@
 
 ## 🎯 Overview
 
-LuxeMart Mobile is a **premium cross-platform mobile application** built with Flutter, delivering native performance and stunning UI for luxury e-commerce. Experience seamless shopping with AR try-on, live shopping, and real-time features.
+Velvoria Mobile is a **premium cross-platform mobile application** built with Flutter, delivering native performance and stunning UI for luxury e-commerce. Experience seamless shopping with AR try-on, live shopping, and real-time features.
 
 ### Why Flutter?
 
@@ -139,8 +139,8 @@ Android Studio / Xcode
 
 ```bash
 # Clone repository
-git clone https://github.com/Naufall18/luxemart-mobile.git
-cd luxemart-mobile
+git clone https://github.com/Naufall18/Velvoria-mobile.git
+cd Velvoria-mobile
 
 # Install dependencies
 flutter pub get
@@ -176,7 +176,7 @@ flutter run -d android
 ## 📁 Project Structure
 
 ```
-luxemart-mobile/
+Velvoria-mobile/
 ├── lib/
 │   ├── main.dart                    # App entry point
 │   ├── app.dart                     # App configuration
@@ -413,9 +413,9 @@ MIT License - see [LICENSE](LICENSE) file.
 
 ## 📞 Support
 
-- 📧 Email: support@luxemart.com
-- 📚 Docs: https://docs.luxemart.com
-- 🐛 Issues: [GitHub Issues](https://github.com/Naufall18/luxemart-mobile/issues)
+- 📧 Email: support@Velvoria.com
+- 📚 Docs: https://docs.Velvoria.com
+- 🐛 Issues: [GitHub Issues](https://github.com/Naufall18/Velvoria-mobile/issues)
 
 ---
 

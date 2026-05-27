@@ -87,7 +87,7 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
         ),
         const SizedBox(height: 8),
         Text(
-          'Join LuxeMart and discover premium products',
+          'Join Velvoria and discover premium products',
           style: TextStyle(
             fontSize: 16,
             color: AppColors.textSecondary.withOpacity(0.7),

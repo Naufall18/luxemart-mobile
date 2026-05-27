@@ -4,7 +4,7 @@ class AppConstants {
   AppConstants._();
 
   // API Configuration
-  static const String baseUrl = 'https://api.luxemart.com';
+  static const String baseUrl = 'https://api.Velvoria.com';
   static const String apiVersion = 'v1';
   static const Duration apiTimeout = Duration(seconds: 30);
 

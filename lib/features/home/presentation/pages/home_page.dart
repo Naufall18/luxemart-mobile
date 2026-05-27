@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                 Text('Good Morning 👋',
                     style: TextStyle(fontSize: 13, color: AppColors.textSecondary)),
                 const SizedBox(height: 2),
-                const Text('Welcome to LuxeMart',
+                const Text('Welcome to Velvoria',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
