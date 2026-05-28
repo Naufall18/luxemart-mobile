@@ -193,7 +193,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 Text('Gift Wrap', style: TextStyle(fontWeight: FontWeight.w600)),
                 Text('Premium packaging + Rp 25,000', style: TextStyle(fontSize: 12, color: AppColors.textSecondary)),
               ])),
-              Switch(value: _giftWrap, onChanged: (v) => setState(() => _giftWrap = v), activeColor: AppColors.primary),
+              Switch(value: _giftWrap, onChanged: (v) => setState(() => _giftWrap = v), activeThumbColor: AppColors.primary),
             ],
           ),
         ),

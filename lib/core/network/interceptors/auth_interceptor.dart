@@ -2,10 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../storage/secure_storage.dart';
 import '../../constants/app_constants.dart';
+import '../../utils/logger.dart';
 
-/// Interceptor to add authentication token to requests
+/// Interceptor to add authentication token and handle token refresh
 class AuthInterceptor extends Interceptor {
   final Ref _ref;
+  bool _isRefreshing = false;
 
   AuthInterceptor(this._ref);
 
@@ -14,11 +16,9 @@ class AuthInterceptor extends Interceptor {
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {
-    // Get token from secure storage
     final storage = _ref.read(secureStorageProvider);
     final token = await storage.read(AppConstants.accessTokenKey);
 
-    // Add token to headers if available
     if (token != null && token.isNotEmpty) {
       options.headers['Authorization'] = 'Bearer $token';
     }
@@ -28,12 +28,53 @@ class AuthInterceptor extends Interceptor {
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
-    // Handle 401 Unauthorized - token expired
-    if (err.response?.statusCode == 401) {
-      // TODO: Implement token refresh logic
-      // For now, just clear the token
-      final storage = _ref.read(secureStorageProvider);
-      await storage.delete(AppConstants.accessTokenKey);
+    if (err.response?.statusCode == 401 && !_isRefreshing) {
+      _isRefreshing = true;
+
+      try {
+        final storage = _ref.read(secureStorageProvider);
+        final currentToken = await storage.read(AppConstants.accessTokenKey);
+
+        if (currentToken == null) {
+          _isRefreshing = false;
+          handler.next(err);
+          return;
+        }
+
+        // Attempt token refresh
+        final dio = Dio(BaseOptions(
+          baseUrl: AppConstants.baseUrl,
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $currentToken',
+          },
+        ));
+
+        final response = await dio.post('/refresh-token');
+
+        if (response.statusCode == 200) {
+          final newToken = response.data['data']['token'] as String;
+          await storage.write(AppConstants.accessTokenKey, newToken);
+
+          // Retry original request with new token
+          final retryOptions = err.requestOptions;
+          retryOptions.headers['Authorization'] = 'Bearer $newToken';
+
+          final retryResponse = await dio.fetch(retryOptions);
+          _isRefreshing = false;
+          handler.resolve(retryResponse);
+          return;
+        }
+      } catch (e) {
+        Logger.error('Token refresh failed', tag: 'AuthInterceptor', error: e);
+        // Clear tokens on refresh failure → force re-login
+        final storage = _ref.read(secureStorageProvider);
+        await storage.delete(AppConstants.accessTokenKey);
+        await storage.delete(AppConstants.refreshTokenKey);
+      }
+
+      _isRefreshing = false;
     }
 
     handler.next(err);

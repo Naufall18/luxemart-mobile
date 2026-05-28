@@ -93,7 +93,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return ListTile(
       leading: Icon(icon, color: AppColors.primary, size: 22),
       title: Text(title, style: const TextStyle(fontSize: 14)),
-      trailing: Switch(value: value, onChanged: onChanged, activeColor: AppColors.primary),
+      trailing: Switch(value: value, onChanged: onChanged, activeThumbColor: AppColors.primary),
       dense: true,
     );
   }

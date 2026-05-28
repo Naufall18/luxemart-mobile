@@ -9,7 +9,7 @@ import 'interceptors/logging_interceptor.dart';
 final dioProvider = Provider<Dio>((ref) {
   final dio = Dio(
     BaseOptions(
-      baseUrl: '${AppConstants.baseUrl}/${AppConstants.apiVersion}',
+      baseUrl: AppConstants.baseUrl,
       connectTimeout: AppConstants.apiTimeout,
       receiveTimeout: AppConstants.apiTimeout,
       headers: {

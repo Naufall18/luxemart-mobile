@@ -1,11 +1,12 @@
+import '../config/app_config.dart';
+
 /// Application-wide constants
 class AppConstants {
   // Private constructor to prevent instantiation
   AppConstants._();
 
-  // API Configuration
-  static const String baseUrl = 'https://api.Velvoria.com';
-  static const String apiVersion = 'v1';
+  // API Configuration - uses environment-based config
+  static String get baseUrl => AppConfig.baseUrl;
   static const Duration apiTimeout = Duration(seconds: 30);
 
   // Storage Keys

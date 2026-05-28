@@ -314,7 +314,7 @@ class _WriteReviewPageState extends State<WriteReviewPage> {
           Switch(
             value: _isAnonymous,
             onChanged: (v) => setState(() => _isAnonymous = v),
-            activeColor: AppColors.accent,
+            activeThumbColor: AppColors.accent,
           ),
         ],
       ),
